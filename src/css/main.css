@@ -171,12 +171,19 @@ section.people .person address a {
   font-size: 15px;
   line-height: 30px;
   height: 30px;
-  background: #00B9DB;
-  padding: 0 10px;
+  background: rgba(0,185,219,0.3);
+  width: 30px;
   font-weight: 600;
   border-radius: 3px;
   color: black;
   text-shadow: 0 1px 1px white;
+  text-align: center;
+}
+
+section.people .person address a.email {
+    background: #00B9DB;
+    padding: 0 10px;
+    width: auto;
 }
 
 section.people .person address a img {
@@ -185,14 +192,6 @@ section.people .person address a img {
 
 section.people .person address a:hover img {
   opacity: 1;
-}
-
-section.people .person address a:nth-child(2),
-section.people .person address a:nth-child(3) {
-  background: rgba(0,185,219,0.3);
-  padding: 0;
-  width: 30px;
-  text-align: center;
 }
 
 
