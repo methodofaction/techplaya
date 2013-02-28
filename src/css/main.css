@@ -214,6 +214,10 @@ section.people .person .tag:after {
   content: ',';
 }
 
+section.people .person .tag:last-child:after {
+  content: '';
+}
+
 section.people .person figure figcaption {
   display: inline-block;
   vertical-align: bottom;
