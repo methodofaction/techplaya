@@ -10,7 +10,7 @@ var projection = d3.geo.satellite()
     .distance(1.7)
     .scale(2500)
     .rotate([90.00, -5, 0])
-    .center([-5, 10])
+    .center([-10, 10])
     .tilt(0)
     .clipAngle(50);
 

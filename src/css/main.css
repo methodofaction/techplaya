@@ -42,6 +42,7 @@ section {
   width: 100%;
   padding: 50px 30px;
   position: relative;
+  overflow: hidden;
 }
 
 section .description {
@@ -83,31 +84,31 @@ section.intro #satellite {
   z-index: -1;
 }
 
-section.intro p,
-section.intro h1 {
-  float: left;
-  width: 50%;
-  padding: 30px;
+section.intro .info {
+  margin: 100px 30px;
+  width: 540px;
 }
 
 section.intro h1 {
   font-size: 72px;
-  text-align: right;
   line-height: 100%;
   letter-spacing: -1px;
+  padding: 0;
   color: white;
-  margin: 100px 0 0 0;
-}
-
-section.intro p {
-  font-size: 24px;
-  margin: 120px 0 0 0;
-  line-height: 130%;
-  color: black;
+  margin: 0 0 20px 0;
 }
 
 section.intro h1 span {
+  white-space: nowrap;
+}
 
+section.intro p {
+  font-size: 20px;
+  margin: 0;
+  line-height: 130%;
+  color: black;
+  padding: 0;
+  max-width: 530px;
 }
 
 section.people {
@@ -518,10 +519,7 @@ section.weather .units .selected {
 }
 
 section.intro .land {
-  fill: #3AA5BF;
-  stroke: black;
-  stroke-opacity: 0.05;
-  stroke-width: 1px;
+  fill: #40B9DB;
 }
 
 section.intro .background {
@@ -529,8 +527,9 @@ section.intro .background {
 }
 
 section.intro .foreground {
-  fill: #0083A2 ;
+  fill: #3EB0D1;
 }
+
 
 .boundary {
   fill: none;
@@ -557,6 +556,11 @@ section.intro .foreground {
 }
 
 @media only screen and (max-width: 1024px) {
+
+  section.intro h1  {
+    
+  }
+
   section.people .person,
   section.people .description {
     width: 50%;
@@ -585,18 +589,22 @@ section.intro .foreground {
 
 @media only screen and (max-width: 600px) {
 
+  section.intro {
+    padding: 30px 0 0 0;
+  }
+
+  section.intro .info {
+    margin-top: 200px;
+    width: 330px;
+  }
+ 
+
   section.intro h1 {
-    width: 100%;
     font-size: 42px;
-    text-align: left;
-    margin-bottom: 0;
   }
 
   section.intro p {
-    width: 100%;
-    font-size: 20px;
-    text-align: left;
-    margin: 0;
+    font-size: 18px;
   }
 
   section.people .person,
@@ -613,6 +621,7 @@ section.intro .foreground {
   .columns section {
     width: 100%;
     padding: 20px 0;
+    overflow: visible;
   }
 
   section.gallery figure, 
