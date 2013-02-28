@@ -3,6 +3,8 @@
 var width = 1200,
     height = 1000;
 
+var isTouch = Modernizr.touch;
+
 var flights_div = document.querySelector("section.flights");
 
 var projection = d3.geo.armadillo()
@@ -91,7 +93,7 @@ var routes = svg.selectAll("path.route")
     .attr("d", function(d) { return path(arc(d)); })
     .attr("stroke", function(d,i){return route_color[i]}) 
     .attr("stroke-dasharray", function(d){ return this.getTotalLength() + " " + this.getTotalLength() })
-    .attr("stroke-dashoffset", function(d){ return this.getTotalLength()})
+    .attr("stroke-dashoffset", function(d){ return isTouch ? 0 : this.getTotalLength()})
     .classed("route", true)
 
 var destination_el = d3.select("#destination");
@@ -104,8 +106,8 @@ var cities = svg.selectAll("circle")
         .attr("cx", function(d){return projection(d.coords)[0]})
         .attr("cy", function(d){return projection(d.coords)[1]})
         .attr("fill", function(d,i){return route_color[i]}) 
-        .attr("r", 1)
-        .style("opacity", 1)
+        .attr("r", isTouch ? 15 : 1)
+        .style("opacity", isTouch ? 0.3 : 1)
         .on("mouseover", function(d, i){
             d3.selectAll("[data-city='" + d.name + "']").style("opacity", 1)
             destination_el
@@ -124,7 +126,7 @@ var cities = svg.selectAll("circle")
                 .style("opacity", 0.3)
         });
 
-window.onscroll = function(){ throttle(routes_animation, window)};
+window.onscroll = isTouch ? null : function(){ throttle(routes_animation, window)};
 
 function routes_animation(){
   if (window.scrollY < flights_div.offsetTop - flights_div.offsetHeight) return;

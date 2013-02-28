@@ -197,14 +197,12 @@ section.people .person figure figcaption {
 section.people .person .name {
   color: #fff;
   font-size: 25px;
-  white-space: nowrap;
   padding-top: 10px;
 }
 
 section.people .role {
   color: #ccc;
   font-size: 15px;
-  white-space: nowrap;
 }
 
 section.people .details {
@@ -549,6 +547,15 @@ section.intro .foreground {
 /* Responsive rules
    ———————————————————————————————————————————————————— */
 
+@media only screen and (max-width: 1300px) {
+  section.people .person figure img {
+    position: static;
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   section.people .person,
   section.people .description {
@@ -568,10 +575,15 @@ section.intro .foreground {
     width: 50%;
   }
 
+  section.faq {
+    width: 100%;
+    margin: 0;
+  }
+
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
 
   section.intro h1 {
     width: 100%;
