@@ -594,7 +594,7 @@ section.intro .foreground {
   }
 
   section.intro .info {
-    margin-top: 200px;
+    margin: 15px;
     width: 330px;
   }
  
@@ -605,6 +605,9 @@ section.intro .foreground {
 
   section.intro p {
     font-size: 18px;
+    position: absolute;
+    bottom: 50px;
+    margin-right: 15px;
   }
 
   section.people .person,
@@ -618,6 +621,10 @@ section.intro .foreground {
     display: none;
   }
 
+  .columns {
+    padding: 0 30px;
+  }
+
   .columns section {
     width: 100%;
     padding: 20px 0;
@@ -629,6 +636,11 @@ section.intro .foreground {
     width: 100%;
     padding: 20px 0;
   }
+
+  section.faq .more_questions {
+    font-size: 22px;
+  }
+
 }
 
 
