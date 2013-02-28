@@ -155,7 +155,7 @@ section.people .person figure {
     min-height: 100px;
 }
 
-section.people .person figure img {
+section.people .person figure > img {
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -164,20 +164,37 @@ section.people .person figure img {
 
 }
 
-section.people .person address {
+section.people .person address a {
+  border-bottom: none;
   display: inline-block;
   font-style: normal;
   font-size: 15px;
+  line-height: 30px;
+  height: 30px;
   background: #00B9DB;
   padding: 0 10px;
   font-weight: 600;
   border-radius: 3px;
+  color: black;
+  text-shadow: 0 1px 1px white;
 }
 
-section.people .person address a {
-  border-bottom: none;
-  color: black;
+section.people .person address a img {
+  opacity: 0.8;
 }
+
+section.people .person address a:hover img {
+  opacity: 1;
+}
+
+section.people .person address a:nth-child(2),
+section.people .person address a:nth-child(3) {
+  background: rgba(0,185,219,0.3);
+  padding: 0;
+  width: 30px;
+  text-align: center;
+}
+
 
 section.people .person h3 {
   font-size: 15px;
@@ -547,7 +564,7 @@ section.intro .foreground {
    ———————————————————————————————————————————————————— */
 
 @media only screen and (max-width: 1300px) {
-  section.people .person figure img {
+  section.people .person figure > img {
     position: static;
     display: block;
     width: 150px;
