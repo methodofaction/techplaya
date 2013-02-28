@@ -180,6 +180,14 @@ section.people .person address a {
   text-align: center;
 }
 
+section.people .person address a.expanded {
+  text-align: left;
+  color: #ccc;
+  width: auto;
+  padding: 0 10px 0 7px;
+  text-shadow: none;
+} 
+
 section.people .person address a.email {
     background: #00B9DB;
     padding: 0 10px;
