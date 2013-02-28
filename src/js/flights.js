@@ -108,7 +108,7 @@ var cities = svg.selectAll("circle")
         .attr("fill", function(d,i){return route_color[i]}) 
         .attr("r", isTouch ? 15 : 1)
         .style("opacity", isTouch ? 0.3 : 1)
-        .on("mouseover", function(d, i){
+        .on("mouseover touchstart", function(d, i){
             d3.selectAll("[data-city='" + d.name + "']").style("opacity", 1)
             destination_el
               .style("border-color", route_color[i])

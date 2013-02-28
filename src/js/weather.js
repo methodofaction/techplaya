@@ -45,7 +45,7 @@
 
   var units = d3.selectAll(".units .unit");
 
-  units.on("click", function(){
+  units.on("click touchstart", function(){
     var isCelsius = d3.select(this).classed("celsius");
     units.classed("selected", false);
     d3.select(this).classed("selected", true);
