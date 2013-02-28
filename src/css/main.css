@@ -550,38 +550,64 @@ section.intro .foreground {
    ———————————————————————————————————————————————————— */
 
 @media only screen and (max-width: 1024px) {
+  section.people .person,
+  section.people .description {
+    width: 50%;
+  }
+
+  .columns section {
+    width: 50%;
+  }
+
+  .columns section:last-child {
+    width: 100%;
+  }
+
+  section.gallery figure, 
+  section.gallery .description {
+    width: 50%;
+  }
 
 }
 
-@media only screen and (max-width: 800px) {
-    section.flush .description {
-      width: 100%;
-    }
-    section.intro h1 {
-      white-space: normal;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    section.gallery figure {
-      width: 100%;
-    }
-    .columns {
-      padding: 0;
-    }
-    .columns section {
-      width: 100%;
-      padding: 20px;
-    }
-    section, section.flush {
-      width: 100%;
-      padding: 20px;
-      margin: 0;
-    }
-}
 
 @media only screen and (max-width: 400px) {
 
+  section.intro h1 {
+    width: 100%;
+    font-size: 42px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  section.intro p {
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    margin: 0;
+  }
+
+  section.people .person,
+  section.people .description {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  section.people .person:after,
+  section.people .person:before {
+    display: none;
+  }
+
+  .columns section {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  section.gallery figure, 
+  section.gallery .description {
+    width: 100%;
+    padding: 20px 0;
+  }
 }
 
 
