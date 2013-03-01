@@ -183,7 +183,7 @@ var destinations = [
         name: "Miami",
         coords: [-80.13, 25.79],
         airlines: ["American Airlines"],
-        flight_time: "14:57"
+        flight_time: "1:57"
     },
     {
         name: "Detroit",

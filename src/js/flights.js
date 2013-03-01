@@ -108,23 +108,28 @@ var cities = svg.selectAll("circle")
         .attr("fill", function(d,i){return route_color[i]}) 
         .attr("r", isTouch ? 15 : 1)
         .style("opacity", isTouch ? 0.3 : 1)
-        .on("mouseover touchstart", function(d, i){
-            d3.selectAll("[data-city='" + d.name + "']").style("opacity", 1)
-            destination_el
-              .style("border-color", route_color[i])
-              .style("opacity", 1)
-              .select("h2")
-                .text(d.name)
-                .style("color", route_color[i]);
-            destination_el.select("#duration").text(d.flight_time);
-            destination_el.select("#airlines").text(d.airlines.join(", "));
-        })
-        .on("mouseout", function(d){
+        .on("mouseover", showInfo)
+        .on("touchstart", showInfo)
+        .on("mouseout", hideInfo)
+
+        function showInfo(d, i){
+          d3.selectAll("[data-city='" + d.name + "']").style("opacity", 1)
+          destination_el
+            .style("border-color", route_color[i])
+            .style("opacity", 1)
+            .select("h2")
+              .text(d.name)
+              .style("color", route_color[i]);
+          destination_el.select("#duration").text(d.flight_time);
+          destination_el.select("#airlines").text(d.airlines.join(", "));
+        }
+
+        function hideInfo(d){
             d3.selectAll("[data-city='" + d.name + "']")
                 .transition()
                 .duration(300)
                 .style("opacity", 0.3)
-        });
+        };
 
 window.onscroll = isTouch ? null : function(){ throttle(routes_animation, window)};
 

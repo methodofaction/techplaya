@@ -13,14 +13,14 @@
     { month: "September", high: 31, low: 24 },
     { month: "October",   high: 28, low: 23 },
     { month: "November",  high: 27, low: 22 },
-    { month: "December",  high: 27, low: 21},
+    { month: "December",  high: 27, low: 21 }
   ];
 
   var fahrenheit = celsius.map(function(d, i){
     function convert(temp) { return Math.round(temp * 9/5 + 32, 0) };
     return {
       high: convert(d.high),
-      low: convert(d.low),
+      low: convert(d.low)
     }
   });
 
@@ -45,7 +45,10 @@
 
   var units = d3.selectAll(".units .unit");
 
-  units.on("click touchstart", function(){
+  units.on("click", switchUnits); 
+  units.on("touchstart", switchUnits); 
+
+  function switchUnits(){
     var isCelsius = d3.select(this).classed("celsius");
     units.classed("selected", false);
     d3.select(this).classed("selected", true);
@@ -65,5 +68,5 @@
     }, 500);
           
     w_div.classed("fahrenheit", !isCelsius);
-  });
+  };
 })();
