@@ -188,6 +188,10 @@ section.people .person address a.expanded {
   text-shadow: none;
 } 
 
+section.people .person address a.skype img {
+  margin: -2px 3px 0 -2px;
+}
+
 section.people .person address a.email {
     background: #00B9DB;
     padding: 0 10px;
