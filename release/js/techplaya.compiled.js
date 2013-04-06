@@ -1038,6 +1038,7 @@ techplaya.flights = function(destinations){
 
   var world = techplaya.world;
   var destinations = techplaya.destinations;
+  var location = [-86.85, 21.16];
 
   // FLIGHTS
   var width = 1200,
@@ -1118,11 +1119,10 @@ techplaya.flights = function(destinations){
 
 
   //routes
-  var cancun = [-86.85, 21.16];
   var route_color = d3.range(destinations.length).map(function(d, i) { return d3.hcl(i*2, 70,Math.random()*50+50).toString(); });
   var arc = d3.geo.greatArc()
       .source(function(d){return d.coords})
-      .target(cancun)
+      .target(location)
       .precision(.1);
 
   var destinations = d3.shuffle(destinations)

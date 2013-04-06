@@ -15,10 +15,11 @@ Customization
 
 If you wish to customize techplaya for your own community you should modify these files:
 
-* **js/destinations.js** Cities and airlines with direct flights
-* **js/flights.js** `var location = [lat, long]`
-* **js/satellite.js** displays the header map. Fiddle around with the projection to get the area of the world that you need.
-* **js/satellite.js** specify the montly weather in Celsius.
+* **src/index.html** Currently all information is hardcoded in HTML, you should modify this
+* **src/js/destinations.js** Cities and airlines with direct flights
+* **src/js/flights.js** `var location = [lat, long]`
+* **src/js/satellite.js** displays the header map. Fiddle around with the projection to get the area of the world that you need.
+* **src/js/satellite.js** specify the montly weather in Celsius.
 
 Build
 -------
