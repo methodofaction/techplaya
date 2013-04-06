@@ -23,7 +23,7 @@ If you wish to customize techplaya for your own community you should modify thes
 Build
 -------
 
-`make release` concatenate your JS and CSS and put it into the `release` directory. It will also modify your `index.html` to point to the minified files. You should deploy the files from this directory.
+`make release` will concatenate your JS and CSS and put it into the `release` directory. It will also modify your `index.html` to point to the minified files. You should deploy the files from this directory.
 
 `make clean` will delete the release directory.
 
