@@ -1,4 +1,4 @@
-var destinations = [
+techplaya.destinations = [
     {
         name: "Moscow",
         coords: [37.6178,55.7517],
@@ -673,4 +673,4 @@ var destinations = [
         flight_time: "4:36"
     }
 
-]
+];

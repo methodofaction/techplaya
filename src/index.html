@@ -9,10 +9,13 @@
   <title>The Tech Scene in Playa del Carmen</title>
   <meta name="description" content="List of people who work in Technology in Playa del Carmen, Mexico. Tips and advice to travel to Playa, and activities to do here.">
   <meta name="viewport" content="width=device-width initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+  <!--{if release}>
+  <link rel="stylesheet" href="css/techplaya.compiled.css">
+  <!{else}-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+  <!--{endif}-->
 </head>
 
 <body>
@@ -124,7 +127,7 @@
               <a href="http://twitter.com/ti0rafa">
                 <img src="img/twitter.svg" width="25" height="25" alt="Twitter" />
               </a>
-              <a href="http://mx.linkedin.com/pub/rafael-fong/34/4b2/178">
+              <a href="http://www.linkedin.com/in/meltix">
                 <img src="img/linkedin.svg" width="25" height="25" alt="LinkedIn" />
               </a>
             </address>
@@ -467,7 +470,7 @@
         <a href="http://get.convert.com/ituesday/">iTuesday</a>
       </dt>
       <dd class="highlighted">
-        Free technology networking event hosted by Dennis van der Heijden that takes place once a month at <a href="http://intheroo.com/view/winery-and-plus-5th-avenue">Winery &amp; Plus</a>. Sign up for <a href="http://get.convert.com/ituesday/">iTuesday's newsletter</a> be notified when the next meeting is taking place.
+        Free technology networking event hosted by Dennis van der Heijden that takes place once a month at <a href="http://intheroo.com/view/winery-and-plus-5th-avenue">Winery &amp; Plus</a>. Sign up for <a href="http://get.convert.com/ituesday/">iTuesday's newsletter</a> to be notified when the next meeting is taking place.
       </dd> 
 
       <dt>
@@ -663,7 +666,7 @@
   </div>
 
 </section>
-<!--{if techplaya_release}>
+<!--{if release}>
   <script type="text/javascript" src="js/techplaya.compiled.js"></script>
 <!{else}-->
 <script src="js/vendor/d3.v3.min.js"></script>
@@ -675,6 +678,7 @@
 <script src="js/weather.js"></script>
 <script src="js/satellite.js"></script>
 <script src="js/flights.js"></script>
+<script src="js/load.js"></script> 
 <!--{endif}-->
 <script type="text/javascript">
 

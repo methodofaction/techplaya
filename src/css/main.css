@@ -551,15 +551,21 @@ section.weather .units .selected {
 }
 
 section.intro .land {
-  fill: #40B9DB;
+  fill: #3EB0D1;
 }
 
 section.intro .background {
   fill: black;
 }
 
+section.intro {
+  background: #40B9DB;
+  position: relative;
+  z-index: 0;
+}
+
 section.intro .foreground {
-  fill: #3EB0D1;
+  fill: #40B9DB;
 }
 
 
@@ -590,7 +596,7 @@ section.intro .foreground {
 @media only screen and (max-width: 1024px) {
 
   section.intro h1  {
-    
+    text-align: center;
   }
 
   section.people .person,

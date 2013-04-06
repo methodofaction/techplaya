@@ -1,6 +1,4 @@
-
-// WEATHER
-(function(){
+techplaya.weather = function() {
   var celsius = [
     { month: "January",   high: 27, low: 20 },
     { month: "February",  high: 27, low: 20 },
@@ -69,4 +67,4 @@
           
     w_div.classed("fahrenheit", !isCelsius);
   };
-})();
+};
